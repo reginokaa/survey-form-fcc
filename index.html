@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <title>Atividade Física na Pandemia - Survey Form</title>
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Atividade Física na Pandemia </h1>
+    <p id="description">pesquisa sobre a continuidade de exercícios físicos durante a quarentena</p>
+  </header>
+
+  <form id="survey-form">
+    <div class="personal-data">
+      <label for="name" id="name-label">nome <br>
+        <input type="text" id="name" placeholder="informe seu nome" required>
+      </label> <br>
+      <label for="email" id="email-label">e-mail <br>
+        <input type="email" id="email" placeholder="informe seu email" required>
+      </label> <br>
+      <label for="number" id="number-label">idade <br>
+        <input type="number" id="number" placeholder="informe sua idade" min="1" max="99">
+      </label> <br>
+    </div>
+
+    <div class="question-1">
+      <h3>você costuma praticar atividades físicas?</h3>
+      <label for="yes">
+        <input type="radio" name="do-workout" id="yes" value="sim"> sim
+      </label>
+      <label for="no">
+        <input type="radio" name="do-workout" id="no" value="nao"> não
+      </label>
+      <input type="button" value="enviar" class="btn-q1 btn">
+      <div class="msg-q1"></div>
+    </div>
+
+    <div class="hidden-class-1" style="display: none;">
+      <div class="activities">
+        <h3>quais atividades você costuma praticar?</h3>
+        <label for="walking">
+          <input type="checkbox" name="workout-type" id="walking" value="caminhada"> caminhada
+        </label>
+        <label for="running">
+          <input type="checkbox" name="workout-type" id="running" value="corrida"> corrida
+        </label>
+        <label for="bike">
+          <input type="checkbox" name="workout-type" id="bike" value="bike"> bike
+        </label>
+        <label for="bodybuilding">
+          <input type="checkbox" name="workout-type" id="bodybuilding" value="musculacao"> musculação
+        </label>
+        <label for="martial-arts">
+          <input type="checkbox" name="workout-type" id="martial-arts" value="artes-marciais"> artes marciais
+        </label>
+        <label for="pilates">
+          <input type="checkbox" name="workout-type" id="pilates" value="pilates"> pilates
+        </label>
+        <label for="yoga">
+          <input type="checkbox" name="workout-type" id="yoga" value="yoga"> yoga
+        </label>
+        <label for="dancing">
+          <input type="checkbox" name="workout-type" id="dancing" value="danca"> dança
+        </label>
+      </div>
+
+      <div class="question-2">
+        <h3>onde você pratica atividades físicas?</h3>
+        <label for="gym">
+          <input type="radio" name="where" id="gym" value="academia"> academia
+        </label>
+        <label for="home">
+          <input type="radio" name="where" id="home" value="em-casa"> em casa / rua
+        </label>
+        <input type="button" value="enviar" class="btn-q2 btn">
+        <div class="msg-q2"></div>
+      </div>
+
+      <div class="hidden-class-2" style="display: none;">
+        <div class="platform">
+          <h3>qual o tipo de plataforma onde você acessa aulas/treinos?</h3>
+          <select name="platform" id="dropdown">
+            <option disabled selected value>- selecione uma opção -</option>
+            <option value="app">app</option>
+            <option value="youtube">youtube</option>
+            <option value="website">site</option>
+            <option value="other">outro</option>
+            <textarea id="other-option" cols="30" rows="1" placeholder="informe a plataforma"></textarea>
+          </select>
+        </div>
+        <button type="submit" id="submit" class="btn">finalizar!</button>
+      </div>
+      <div class="msg-submit"></div>
+    </div>
+  </form>
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
