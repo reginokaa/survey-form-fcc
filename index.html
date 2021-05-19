@@ -14,37 +14,38 @@
 <body>
   <header>
     <h1 id="title">Atividade Física na Pandemia </h1>
-    <p id="description">pesquisa sobre a continuidade de exercícios físicos durante a quarentena</p>
+    <p id="description">pesquisa sobre a continuidade na prática de exercícios físicos durante a quarentena</p>
   </header>
 
+  <div class="border"></div>
   <form id="survey-form">
     <div class="personal-data">
-      <label for="name" id="name-label">nome <br>
-        <input type="text" id="name" placeholder="informe seu nome" required>
+      <label for="name" id="name-label">nome*<br>
+        <input type="text" id="name" class="input" placeholder="informe seu nome" required>
       </label> <br>
-      <label for="email" id="email-label">e-mail <br>
-        <input type="email" id="email" placeholder="informe seu email" required>
+      <label for="email" id="email-label">e-mail*<br>
+        <input type="email" id="email" class="input" placeholder="informe seu email" required>
       </label> <br>
-      <label for="number" id="number-label">idade <br>
-        <input type="number" id="number" placeholder="informe sua idade" min="1" max="99">
+      <label for="number" id="number-label">idade*<br>
+        <input type="number" id="number" class="input" placeholder="informe sua idade" min="1" max="99" required>
       </label> <br>
     </div>
 
     <div class="question-1">
-      <h3>você costuma praticar atividades físicas?</h3>
+      <h4>você costuma praticar atividades físicas?</h4>
       <label for="yes">
         <input type="radio" name="do-workout" id="yes" value="sim"> sim
       </label>
       <label for="no">
         <input type="radio" name="do-workout" id="no" value="nao"> não
       </label>
-      <input type="button" value="enviar" class="btn-q1 btn">
-      <div class="msg-q1"></div>
     </div>
+    <input type="button" value="enviar" class="btn-q1 btn">
+    <div class="msg-q1"></div>
 
     <div class="hidden-class-1" style="display: none;">
       <div class="activities">
-        <h3>quais atividades você costuma praticar?</h3>
+        <h4>quais atividades você costuma praticar?</h4>
         <label for="walking">
           <input type="checkbox" name="workout-type" id="walking" value="caminhada"> caminhada
         </label>
@@ -72,20 +73,20 @@
       </div>
 
       <div class="question-2">
-        <h3>onde você pratica atividades físicas?</h3>
+        <h4>onde você pratica atividades físicas?</h4>
         <label for="gym">
           <input type="radio" name="where" id="gym" value="academia"> academia
         </label>
         <label for="home">
-          <input type="radio" name="where" id="home" value="em-casa"> em casa / rua
+          <input type="radio" name="where" id="home" value="em-casa"> em casa / na rua
         </label>
-        <input type="button" value="enviar" class="btn-q2 btn">
-        <div class="msg-q2"></div>
       </div>
+      <input type="button" value="enviar" class="btn-q2 btn">
+      <div class="msg-q2"></div>
 
       <div class="hidden-class-2" style="display: none;">
         <div class="platform">
-          <h3>qual o tipo de plataforma onde você acessa aulas/treinos?</h3>
+          <h4>qual o tipo de plataforma onde você acessa aulas/treinos?</h4>
           <select name="platform" id="dropdown">
             <option disabled selected value>- selecione uma opção -</option>
             <option value="app">app</option>

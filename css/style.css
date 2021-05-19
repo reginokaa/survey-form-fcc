@@ -7,8 +7,9 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: calc(10px + 0.5vw);
-  background: no-repeat url(../img/bg.jpg);
+  /* font-size: calc(10px + 0.5vw); */
+  color: #303030;
+  background: no-repeat center/cover url(../img/bg2.jpg);
 }
 
 header {
@@ -19,7 +20,7 @@ header {
 header h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 2.8em;
-  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.384);
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 1);
 }
 
 header p {
@@ -30,15 +31,17 @@ header p {
 #survey-form {
   width: 720px;
   background-color: #fff;
-  padding: 30px;
-  border-radius: 25px;
+  padding: 50px;
   margin: 5vh auto;
-  /* box-shadow: 15px 15px gray; */
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px 0px rgba(48,48,48,1);
 }
 
 .personal-data {
   padding: 5px 0px 25px;
   border-bottom: 1px dashed gray;
+  display: flex;
+  flex-direction: column;
 }
 
 .personal-data label {
@@ -46,74 +49,71 @@ header p {
 }
 
 .personal-data input,
-select, textarea {
-  width: 50%;
-  border: 0.5px solid gray;
+select,
+textarea {
+  width: 100%;
+  border: 0.1px solid #b8b5b5;
   border-radius: 3px;
   margin: 5px 0px;
-}
-
-.personal-data input {
-  width: 100%;
   padding: 2px 10px;
+  height: 5vh;
 }
 
-
-h3 {
-  padding-bottom: 10px;
+h4 {
+  padding-bottom: 15px;
 }
 
 .question-1,
-.question-2 {
+.question-2,
+.hidden-class-1,
+.hidden-class-2 {
   padding: 25px 0px;
 }
 
-.hidden-class-1,
-.hidden-class-2 {
-  padding: 0px 0px 25px;
-}
-
-.question-1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.activities {
-  display: flex;
-  flex-direction: column;
-}
-
-.question-2 {
-  display: flex;
-  flex-direction: column;
-}
-
+.question-1,
+.activities,
+.question-2,
 .platform {
   display: flex;
   flex-direction: column;
 }
 
+.platform {
+  padding-bottom: 20px;
+}
+
 .btn {
-  width: 100px;
-  margin-top: 10px;
-  padding: 5px;
-  background-color: #C88176;
-  border: 2px solid #3D2724;
-  border-radius: 5px;
+  width: 300px;
+  padding: 10px 0px;
+  background-color: #c876c6;
+  border-radius: 50px;
   cursor: pointer;
-  color: #3D2724;
+  color: #fff;
   font-weight: bold;
+  font-size: 1.5vh;
+  margin: auto;
+  display: block;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #c876c6;
+  border: 1px solid #c876c6;
 }
 
 .msg-q1, .msg-q2 {
   width: 100%;
   text-align: center;
-  font-size: 22px;
+  font-size: 2rem;
+  font-family: 'Permanent Marker', cursive;
+  color:greenyellow;
+  text-shadow: 2px 2px #b8b5b5;
 }
 
 @media (max-width: 767px) {
   #survey-form {
     width: 90%;
+    padding: 30px;
   }
 
   select, textarea,

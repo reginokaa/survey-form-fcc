@@ -61,3 +61,15 @@ function checkOtherOption() {
     otherOption.style.display = 'none'
   }
 }
+
+/* confirmação */
+submit.onclick = function () {
+  let inputs = document.querySelectorAll('.input')
+
+  for (let i of inputs) {
+    if (i.value != '') {
+      alert('obrigada por participar!!')
+      break
+    }
+  }
+}
